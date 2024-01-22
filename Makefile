@@ -16,4 +16,7 @@ migratedown:
 psql:
 	docker exec -it postgres12 psql -U root simple_bank
 
-.PHONY: postgres createdb dropdb migrateup migratedown psql
+sqlc:
+	sqlc generate
+
+.PHONY: postgres createdb dropdb migrateup migratedown psql sqlc
